@@ -1,6 +1,13 @@
 * {
     border: 0;
     padding: 0;
+    color: white;
+    font-family: pixel;
+}
+
+@font-face {
+  font-family: pixel; /* set name */
+  src: url(public/fonts/pixel_new.ttf); /* url of the font */
 }
 
 :root {
@@ -9,5 +16,61 @@
 
 body {
     background-color: #333;
+    overflow: hidden;
+}
+
+.unselectable {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.window {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    position: absolute;
+}
+
+.window-title {
+    width: 100%;
+    background-color: green;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.window-close-button {
+    border-radius: 50%;
+    border: none;
     color: white;
+    background-color: red;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.window-close-button::after {
+  position: relative;
+  top: -20%;
+  left: 4%;
+  content: "x"; /* This will render the 'X' */
+}
+
+.taskbar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100vw;
+    background-color: green;
+    height: 60px;
 }
