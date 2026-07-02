@@ -7,6 +7,8 @@ function spawnWindow(width, height, title, icon, content) {
     const titleSpan = document.createElement("span")
     const titleIcon = document.createElement("img")
     const closeButton = document.createElement("button")
+    const closeButtonImg = document.createElement("img")
+    const contentIframe = document.createElement("iframe")
 
     //attribute things to the elements
 
@@ -26,16 +28,21 @@ function spawnWindow(width, height, title, icon, content) {
     titleIcon.src = icon
 
     closeButton.classList.add("window-close-button")
-    //closeButton.textContent = "x"
+    closeButtonImg.src = "public/images/close.png"
+    closeButtonImg.classList.add("window-close-button-img")
+
+    contentIframe.classList.add("content-iframe")
+    contentIframe.src = content
 
     //join the elements
+    closeButton.append(closeButtonImg)
     titleDiv.append(titleIcon)
     titleDiv.append(titleSpan)
     titleDiv.append(closeButton)
     windowDiv.append(titleDiv)
+    windowDiv.append(contentIframe)
 
     //dragging functionality
-    
 
     let mouseDown = false;
     let offsetX = 0;
@@ -71,6 +78,66 @@ function spawnWindow(width, height, title, icon, content) {
 
 }
 
-spawnWindow(600, 400, "oi", "sla", "sla")
 
-spawnWindow(400, 400, "oi", "sla", "sla")
+function spawnDesktopIcon(x, y, text, icon, action) {
+    const iconDiv = document.createElement("div")
+    const iconImg = document.createElement("img")
+    const iconSpan = document.createElement("span")
+
+    //attribute things to the elements
+
+    iconDiv.classList.add("desktop-icon")
+    iconDiv.style.userSelect = "none"
+    iconDiv.style.left = x + "px"
+    iconDiv.style.top = y + "px"
+
+    iconImg.classList.add("desktop-icon-img")
+    iconImg.classList.add("unselectable")
+    iconImg.src = icon
+
+    iconSpan.classList.add("desktop-icon-span")
+    iconSpan.textContent = text
+
+    //join the elements
+
+    iconDiv.append(iconImg)
+    iconDiv.append(iconSpan)
+
+    //dragging functionality
+
+    let mouseDown = false;
+    let offsetX = 0;
+    let offsetY = 0;
+
+    iconDiv.addEventListener("mousedown", (e) => {
+        mouseDown = true;
+
+        const rect = iconDiv.getBoundingClientRect();
+
+        offsetX = e.clientX - rect.left;
+        offsetY = e.clientY - rect.top;
+    });
+
+    iconDiv.addEventListener("mouseup", () => {
+        mouseDown = false;
+    });
+
+    document.addEventListener("mousemove", (e) => {
+        if (!mouseDown) return;
+
+        iconDiv.style.left = (e.clientX - offsetX) + "px";
+        iconDiv.style.top = (e.clientY - offsetY) + "px";
+    });
+
+    //clicking functionality
+
+    iconDiv.addEventListener("dblclick", action)
+
+    desktopDiv.append(iconDiv)
+
+}
+
+
+spawnDesktopIcon(20, 20, "leia.txt", "public/images/textfile.png", function(){
+    spawnWindow(600, 500, "leia.txt", "public/images/textfile.png", "public/websites/leia.html")
+})

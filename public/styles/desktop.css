@@ -1,0 +1,103 @@
+
+.desktop {
+    background: url(../images/wallpaper.png);
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-position-y: top;
+}
+
+.window {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    border: 2px solid var(--green-600);
+    background-color: var(--surface);
+    z-index: 2;
+}
+
+.window-title {
+    width: 100%;
+    background-color: var(--bg-700);
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px;
+    border-bottom: 2px solid var(--green-600);
+    color: var(--text-primary);
+}
+
+.window-title-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.window-close-button {
+    border: none;
+    background-color: var(--bg-800);
+    border: 2px solid var(--green-500);
+    color: var(--green-300);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+.window-close-button-img {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-iframe {
+    width: 100%;
+    height: max-content;
+    border: 0;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.taskbar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100vw;
+    background-color: var(--bg-700);
+    border-top: 2px solid var(--green-500);
+    height: 60px;
+}
+
+.desktop-icon {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    max-width: 150px;
+    font-size: 0.7rem;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.desktop-icon-span {
+    text-align: center;
+}
+
+.desktop-icon-img {
+    width: 64px;
+}
+
+.desktop-icon:hover {
+    background-color: rgba(18, 255, 93, 0.12);
+}

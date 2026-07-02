@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: pixel;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+@font-face {
+  font-family: pixel; /* set name */
+  src: url(../fonts/pixel_new.ttf); /* url of the font */
+}
+
+:root {
+    /* Backgrounds */
+    --bg-900: #010c12;   /* Main background */
+    --bg-800: #07161d;   /* Cards */
+    --bg-700: #0c212b;   /* Elevated surfaces */
+    --bg-600: #15313d;   /* Hover */
+
+    /* Primary Green */
+    --green-100: #d8ffe5;
+    --green-200: #9fffc2;
+    --green-300: #55ff90;
+    --green-400: #12ff5d; /* Primary */
+    --green-500: #0ec23b;
+    --green-600: #087b27;
+
+    /* Neutral Grays (slightly blue) */
+    --gray-100: #eef4f6;
+    --gray-200: #d7e0e4;
+    --gray-300: #b6c3ca;
+    --gray-400: #8797a0;
+    --gray-500: #60717b;
+    --gray-600: #3d4e57;
+    --gray-700: #27353d;
+    --gray-800: #18242b;
+
+    /* Soft Whites */
+    --white-100: #ffffff;
+    --white-200: #f7fbfc;
+    --white-300: #edf5f7;
+
+    /* Semantic */
+    --text-primary: var(--gray-100);
+    --text-secondary: var(--gray-300);
+    --text-muted: var(--gray-500);
+
+    --border: rgba(255,255,255,0.08);
+    --border-hover: rgba(18,255,93,0.25);
+
+    --surface: var(--bg-800);
+    --surface-hover: var(--bg-700);
+
+    --accent: var(--green-400);
+    --accent-hover: var(--green-300);
+    --accent-active: var(--green-500);
+
+    --success: #2ed573;
+    --warning: #ffb347;
+    --danger: #ff5f6d;
+
+    /* Shadows */
+    --shadow: rgba(0,0,0,.45);
+    --glow: rgba(18,255,93,.35);
+}
+
+body {
+    overflow: hidden;
+}
+
+.unselectable {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none; /*Only if the image doesn't need to be clicked */
+}
