@@ -79,3 +79,7 @@ body {
     -ms-user-select: none;
     pointer-events: none; /*Only if the image doesn't need to be clicked */
 }
+
+input[type="text"] {
+    outline: none;
+}

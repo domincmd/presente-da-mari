@@ -1,0 +1,22 @@
+/* TERMINAL STYLING */
+body {
+    overflow: scroll;
+}
+
+
+.current-line {
+    display: flex;
+}
+
+.current-line-span {
+    color: var(--green-500);
+    margin-right: 10px;
+}
+
+.current-line-input {
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+    flex: 1;
+}

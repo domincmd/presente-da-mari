@@ -3,8 +3,9 @@
     background: url(../images/wallpaper.png);
     width: 100vw;
     height: 100vh;
-    background-size: 100% 100%;
-    background-position-y: top;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .window {
@@ -14,6 +15,15 @@
     border: 2px solid var(--green-600);
     background-color: var(--surface);
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.window iframe {
+    flex: 1;
 }
 
 .window-title {
