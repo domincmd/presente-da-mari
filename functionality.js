@@ -145,3 +145,7 @@ spawnDesktopIcon(20, 20, "leia.txt", "public/images/textfile.png", function(){
 spawnDesktopIcon(100, 20, "terminal.exe", "public/images/terminal.png", function(){
     spawnWindow(600, 500, "terminal.exe", "public/images/terminal.png", "public/websites/terminal.html")
 })
+
+spawnDesktopIcon(230, 20, "calculadora.exe", "public/images/calculator.png", function(){
+    spawnWindow(300, 400, "calculadora.exe", "public/images/calculator.png", "public/websites/calculator.html")
+})

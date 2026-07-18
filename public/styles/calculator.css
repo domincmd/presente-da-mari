@@ -1,0 +1,34 @@
+.main-container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+
+.input-container {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--green-500);
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.button-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.button {
+    box-sizing: border-box;
+    margin: 1px;
+    background-color: var(--bg-800);
+    border: 2px solid var(--green-500);
+    color: var(--green-300);
+    width: calc(100%-10px);
+    height: calc(100%-10px);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}

@@ -46,7 +46,6 @@
 }
 
 .window-close-button {
-    border: none;
     background-color: var(--bg-800);
     border: 2px solid var(--green-500);
     color: var(--green-300);
@@ -68,7 +67,7 @@
 
 .content-iframe {
     width: 100%;
-    height: max-content;
+    height: 100%;
     border: 0;
     box-sizing: border-box;
     padding: 10px;
