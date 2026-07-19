@@ -9,15 +9,16 @@
 </head>
 <body>
     <div class="url-container">
-        <input type="text" name="url-input" class="url-input">
+        <input type="text" name="url-input" class="url-input" placeholder="digite o url aqui...">
         <div class="actions-container">
-            <img src="../images/back.png" class="actions-button"></img>
-            <img src="../images/refresh.png" class="actions-button"></img>
-            <img src="../images/front.png" class="actions-button"></img>
+            <img onclick="back()" src="../images/back.png" class="actions-button"></img>
+            <img onclick="loadPage(urlInput.value)" src="../images/refresh.png" class="actions-button"></img>
+            <img onclick="front()" src="../images/front.png" class="actions-button"></img>
         </div>
     </div>
     <div class="iframe-container">
-        <iframe src="https://google.com" frameborder="0"></iframe>
+        <iframe class="iframe" src="pages/startpage.html" frameborder="0"></iframe>
     </div>
 </body>
+<script src="../scripts/chorme.js"></script>
 </html>
