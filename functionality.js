@@ -149,3 +149,7 @@ spawnDesktopIcon(100, 20, "terminal.exe", "public/images/terminal.png", function
 spawnDesktopIcon(230, 20, "calculadora.exe", "public/images/calculator.png", function(){
     spawnWindow(300, 400, "calculadora.exe", "public/images/calculator.png", "public/websites/calculator.html")
 })
+
+spawnDesktopIcon(20, 140, "chorme.exe", "public/images/chorme.png", function(){
+    spawnWindow(700, 500, "chorme.exe", "public/images/chorme.png", "public/websites/chorme.html")
+})
