@@ -1,5 +1,6 @@
 const pages = {
     "qu3c0m3cem0sjo6os.com": "1.html",
+    "3spert1nh0.com": "2.html"
 };
 
 const iframe = document.querySelector(".iframe");

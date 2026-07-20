@@ -27,6 +27,13 @@
     --green-500: #0ec23b;
     --green-600: #087b27;
 
+    --purple-100: #f0dcff;
+    --purple-200: #ddb0ff;
+    --purple-300: #c078ff;
+    --purple-400: #a23dff; /* Primary */
+    --purple-500: #7d1fd6;
+    --purple-600: #56108f;
+
     /* Neutral Grays (slightly blue) */
     --gray-100: #eef4f6;
     --gray-200: #d7e0e4;
