@@ -1,6 +1,8 @@
 const pages = {
     "qu3c0m3cem0sjo6os.com": "1.html",
-    "3spert1nh0.com": "2.html"
+    "3spert1nh0.com": "2.html",
+    "3n1gmas.com": "3.html",
+    "m0rt3br0x4.com": "4.html"
 };
 
 const iframe = document.querySelector(".iframe");
