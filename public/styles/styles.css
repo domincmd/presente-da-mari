@@ -90,3 +90,7 @@ body {
 input[type="text"] {
     outline: none;
 }
+
+.invisible {
+    color: transparent;
+}

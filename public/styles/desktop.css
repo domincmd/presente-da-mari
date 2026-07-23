@@ -80,8 +80,11 @@
     z-index: 999;
     width: 100vw;
     background-color: var(--bg-700);
-    border-top: 2px solid var(--green-500);
-    height: 60px;
+    border-top: 3px solid var(--green-500);
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .desktop-icon {
@@ -109,4 +112,20 @@
 
 .desktop-icon:hover {
     background-color: rgba(18, 255, 93, 0.12);
+}
+
+.left-taskbar {
+    height: 100%;
+    margin-left: 5px;
+}
+
+.taskbar-img {
+    height: 100%;
+    padding: 2px 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.time {
+    margin-right: 10px;
 }

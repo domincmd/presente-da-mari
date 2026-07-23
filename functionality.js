@@ -1,5 +1,14 @@
 const desktopDiv = document.querySelector(".desktop")
+const timeDiv = document.querySelector(".time")
 
+function updateClock() {
+  timeDiv.textContent = new Date().toLocaleTimeString("en-GB", {
+    hour12: false
+  });
+}
+
+updateClock(); // Update immediately
+setInterval(updateClock, 1000);
 
 function spawnWindow(width, height, title, icon, content) {
     const windowDiv = document.createElement("div")
@@ -152,4 +161,8 @@ spawnDesktopIcon(150, 20, "calc.exe", "public/images/calculator.png", function()
 
 spawnDesktopIcon(20, 140, "chorme.exe", "public/images/chorme.png", function(){
     spawnWindow(700, 500, "chorme.exe", "public/images/chorme.png", "public/websites/chorme.html")
+})
+
+spawnDesktopIcon(100, 140, "guia.txt", "public/images/textfile.png", function(){
+    spawnWindow(700, 500, "guia.txt", "public/images/textfile.png", "public/websites/guia.html")
 })

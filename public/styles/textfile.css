@@ -1,0 +1,23 @@
+body {
+    overflow-y: scroll;
+    font-size: 0.8rem;
+    text-align: justify;
+}
+
+
+.warning {
+    border: 2px solid red;
+    background-color: rgb(204, 0, 0);
+    padding: 2px;
+    font-size: 0.7rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 2px solid var(--green-400);
+    padding: 8px;
+}
