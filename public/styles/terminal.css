@@ -3,6 +3,10 @@ body {
     overflow: scroll;
 }
 
+* {
+    font-size: 0.8rem;
+}
+
 .current-line {
     display: flex;
 }
@@ -13,7 +17,6 @@ body {
 }
 
 .current-line-input {
-    font-size: 1rem;
     background-color: transparent;
     border: none;
     width: fit-content;

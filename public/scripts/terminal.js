@@ -1,6 +1,11 @@
 const previousLinesDiv = document.querySelector(".previous-lines")
 const currentLineInput = document.querySelector(".current-line-input")
 
+const pingResults = {
+    "ops.txt": "3",
+    "guia.txt": "arquivo de: samuel"
+}
+
 function parseInput(input) {
     const parts = input.trim().split(/\s+/);
     const keyword = parts[0]?.toLowerCase();
@@ -13,6 +18,16 @@ function parseInput(input) {
             output = "error: echo requires exactly 1 argument";
         } else {
             output = args[0];
+        }
+    }else if (keyword == "ping") {
+        if (args.length !== 1) {
+            output = "error: ping requires exactly 1 argument";
+        } else {
+            if (args[0] in pingResults) {
+                output = pingResults[args[0]]
+            }else{
+                output = "file not found"
+            }
         }
     }
 
