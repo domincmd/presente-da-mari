@@ -56,6 +56,10 @@
     position: relative;
 }
 
+.window-close-button:hover {
+    background-color: var(--green-400);
+}
+
 .window-close-button-img {
     width: 14px;
     height: 14px;
@@ -63,6 +67,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.window-close-button:hover .window-close-button-img {
+    filter: brightness(0);
 }
 
 .content-iframe {

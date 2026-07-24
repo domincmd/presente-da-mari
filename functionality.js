@@ -163,6 +163,6 @@ spawnDesktopIcon(20, 140, "chorme.exe", "public/images/chorme.png", function(){
     spawnWindow(700, 500, "chorme.exe", "public/images/chorme.png", "public/websites/chorme.html")
 })
 
-spawnDesktopIcon(100, 140, "guia.txt", "public/images/textfile.png", function(){
+spawnDesktopIcon(250, 20, "guia.txt", "public/images/textfile.png", function(){
     spawnWindow(700, 500, "guia.txt", "public/images/textfile.png", "public/websites/guia.html")
 })
